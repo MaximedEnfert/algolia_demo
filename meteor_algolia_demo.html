@@ -1,0 +1,32 @@
+<head>
+  <title>Algolia demo</title>
+</head>
+
+<body>
+  <h1>Vehicules in GTA</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+
+
+<form class="search_form">
+	<input type="text" name="text" placeholder="Search for a vehicule..."/>	
+</form>
+
+      		<div id="four-columns" class="grid-container">
+			<ul class="rig columns-4">
+				    {{#each content.hits}}
+				<li>
+					<img src="{{Picture}}"/>
+					<h3>{{Vehicle_Name}}</h3>
+					<p>{{Class}}<br>{{Buy_Price}}K USD </p>
+				</li>
+				    {{/each}}
+			</ul>
+		</div>
+
+
+</template>
+
